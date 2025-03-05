@@ -26,7 +26,7 @@ pipeline {
     stage ('DEV Deploy') {
       steps {
       echo "deploying to DEV Env "
-      deploy adapters: [tomcat9(credentialsId: 'e7d40853-a2c0-4a8e-9c6a-f8c95002ecbd', path: '', url: 'http://3.90.138.131:8080')], contextPath: null, war: '**/*.war'
+      deploy adapters: [tomcat9(credentialsId: 'e7d40853-a2c0-4a8e-9c6a-f8c95002ecbd', path: '', url: 'http://34.229.39.31:8080')], contextPath: null, war: '**/*.war'
       }
     }
     stage ('Slack Notification') {
@@ -46,7 +46,7 @@ pipeline {
      stage ('QA Deploy') {
       steps {
         echo "deploying to QA Env "
-        deploy adapters: [tomcat9(credentialsId: 'e7d40853-a2c0-4a8e-9c6a-f8c95002ecbd', path: '', url: 'http://3.90.138.131:8080')], contextPath: null, war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'e7d40853-a2c0-4a8e-9c6a-f8c95002ecbd', path: '', url: 'http://34.229.39.31:8080')], contextPath: null, war: '**/*.war'
         }
     }
     stage ('QA Approve') {
