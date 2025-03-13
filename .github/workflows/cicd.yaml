@@ -23,4 +23,4 @@ jobs:
         channel: '#all-cloudsudo'
         status: ${{ job.status }}
         steps: ${{ toJson(steps) }}
-      if: always(
+      if: always()
