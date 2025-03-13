@@ -1,4 +1,4 @@
-name: cicd-workflow with slack integration
+name: cicd-workflow with Slack Integration by Sam
 on:
   push:
     branches:
